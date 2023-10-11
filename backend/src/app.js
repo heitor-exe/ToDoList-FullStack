@@ -1,9 +1,9 @@
 const express = require('express')
+const router = require('./router')
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.status(200).send('Hello, World!')
-})
+// app should always use router
+app.use(router)
 
 module.exports = app;
